@@ -1,0 +1,16 @@
+// Root of our application
+import { Module } from '@nestjs/common';
+import { StudentController } from 'src/student/student.controller';
+import { TeacherController } from 'src/teacher/teacher.controller';
+import { StudentTeacherController } from 'src/teacher/student.controller';
+
+@Module({
+  imports: [],
+  // import the created controller
+  controllers: [
+    StudentController,
+    TeacherController,
+    StudentTeacherController,
+  ]
+})
+export class AppModule { }
